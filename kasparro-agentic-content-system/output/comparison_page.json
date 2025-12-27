@@ -1,0 +1,258 @@
+{
+  "page_type": "comparison",
+  "title": "GlowBoost Vitamin C Serum vs RadiantGlow Niacinamide Serum - Comparison",
+  "content": {
+    "page_title": "GlowBoost Vitamin C Serum vs RadiantGlow Niacinamide Serum - Comparison",
+    "meta_description": "Compare GlowBoost Vitamin C Serum vs RadiantGlow Niacinamide Serum. See ingredients, benefits, prices, and find the best choice for your skin.",
+    "header": {
+      "title": "Product Comparison",
+      "subtitle": "Compare GlowBoost Vitamin C Serum and RadiantGlow Niacinamide Serum to find the best fit for your skincare routine",
+      "products": [
+        "GlowBoost Vitamin C Serum",
+        "RadiantGlow Niacinamide Serum"
+      ]
+    },
+    "quick_overview": {
+      "product_a": {
+        "name": "GlowBoost Vitamin C Serum",
+        "price": "₹699.0",
+        "key_ingredients": [
+          "Vitamin C",
+          "Hyaluronic Acid"
+        ],
+        "top_benefit": "Brightening",
+        "skin_types": [
+          "Oily",
+          "Combination"
+        ]
+      },
+      "product_b": {
+        "name": "RadiantGlow Niacinamide Serum",
+        "price": "₹599.0",
+        "key_ingredients": [
+          "Niacinamide",
+          "Zinc PCA",
+          "Hyaluronic Acid"
+        ],
+        "top_benefit": "Pore minimizing",
+        "skin_types": [
+          "Oily",
+          "Sensitive",
+          "Normal"
+        ]
+      }
+    },
+    "comparison_table": [
+      {
+        "attribute": "Price",
+        "product_a_value": "₹699.0",
+        "product_b_value": "₹599.0",
+        "winner": "RadiantGlow Niacinamide Serum",
+        "highlight": true
+      },
+      {
+        "attribute": "Concentration",
+        "product_a_value": "10% Vitamin C",
+        "product_b_value": "5% Niacinamide",
+        "winner": "tie",
+        "highlight": false
+      },
+      {
+        "attribute": "Key Ingredients",
+        "product_a_value": "Vitamin C, Hyaluronic Acid",
+        "product_b_value": "Niacinamide, Zinc PCA, Hyaluronic Acid",
+        "winner": "RadiantGlow Niacinamide Serum",
+        "highlight": false
+      },
+      {
+        "attribute": "Benefits",
+        "product_a_value": "Brightening, Fades dark spots",
+        "product_b_value": "Pore minimizing, Oil control, Brightening",
+        "winner": "RadiantGlow Niacinamide Serum",
+        "highlight": false
+      },
+      {
+        "attribute": "Suitable Skin Types",
+        "product_a_value": "Oily, Combination",
+        "product_b_value": "Oily, Sensitive, Normal",
+        "winner": "RadiantGlow Niacinamide Serum",
+        "highlight": false
+      }
+    ],
+    "detailed_comparisons": {
+      "ingredients": {
+        "title": "Ingredient Comparison",
+        "common_ingredients": {
+          "label": "Shared Ingredients",
+          "items": [
+            "hyaluronic acid"
+          ],
+          "description": "Both products contain hyaluronic acid"
+        },
+        "unique_to_a": {
+          "label": "Only in GlowBoost Vitamin C Serum",
+          "items": [
+            "vitamin c"
+          ]
+        },
+        "unique_to_b": {
+          "label": "Only in RadiantGlow Niacinamide Serum",
+          "items": [
+            "niacinamide",
+            "zinc pca"
+          ]
+        },
+        "similarity_score": "25%"
+      },
+      "benefits": {
+        "title": "Benefits Comparison",
+        "product_a_benefits": {
+          "product_name": "GlowBoost Vitamin C Serum",
+          "benefits": [
+            "Brightening",
+            "Fades dark spots"
+          ]
+        },
+        "product_b_benefits": {
+          "product_name": "RadiantGlow Niacinamide Serum",
+          "benefits": [
+            "Pore minimizing",
+            "Oil control",
+            "Brightening"
+          ]
+        },
+        "common_benefits": [
+          "brightening"
+        ],
+        "unique_to_a": [
+          "fades dark spots"
+        ],
+        "unique_to_b": [
+          "pore minimizing",
+          "oil control"
+        ]
+      },
+      "price": {
+        "title": "Price Comparison",
+        "product_a_price": {
+          "amount": 699.0,
+          "currency": "INR"
+        },
+        "product_b_price": {
+          "amount": 599.0,
+          "currency": "INR"
+        },
+        "difference": {
+          "amount": 100.0,
+          "percentage": "16.7%"
+        },
+        "more_affordable": "RadiantGlow Niacinamide Serum",
+        "value_assessment": "RadiantGlow Niacinamide Serum offers better value for money"
+      },
+      "suitability": {
+        "product_a_suitable_for": [
+          "Combination",
+          "Oily"
+        ],
+        "product_b_suitable_for": [
+          "Normal",
+          "Sensitive",
+          "Oily"
+        ],
+        "common_skin_types": [
+          "Oily"
+        ],
+        "recommendation": "Choose GlowBoost Vitamin C Serum if you have Combination skin. Choose RadiantGlow Niacinamide Serum if you have Normal or Sensitive skin"
+      }
+    },
+    "winners": {
+      "by_category": {
+        "price": "RadiantGlow Niacinamide Serum",
+        "benefits": "RadiantGlow Niacinamide Serum",
+        "ingredients": "RadiantGlow Niacinamide Serum",
+        "versatility": "RadiantGlow Niacinamide Serum"
+      },
+      "summary": {
+        "product_a_wins": {
+          "count": 0,
+          "categories": []
+        },
+        "product_b_wins": {
+          "count": 4,
+          "categories": [
+            "price",
+            "benefits",
+            "ingredients",
+            "versatility"
+          ]
+        },
+        "ties": {
+          "count": 0,
+          "categories": []
+        }
+      }
+    },
+    "recommendation": {
+      "summary": "RadiantGlow Niacinamide Serum edges ahead in this comparison, winning 4 out of 4 categories. However, your choice should depend on your specific skin needs and budget.",
+      "choose_product_a_if": [
+        "You want products with vitamin c",
+        "Your primary concern is fades dark spots",
+        "You have combination skin"
+      ],
+      "choose_product_b_if": [
+        "You're looking for a more budget-friendly option",
+        "You want products with niacinamide, zinc pca",
+        "Your primary concern is pore minimizing or oil control",
+        "You have normal or sensitive skin"
+      ]
+    },
+    "product_details": {
+      "product_a": {
+        "name": "GlowBoost Vitamin C Serum",
+        "key_ingredients": [
+          "Vitamin C",
+          "Hyaluronic Acid"
+        ],
+        "benefits": [
+          "Brightening",
+          "Fades dark spots"
+        ],
+        "price": 699.0,
+        "currency": "INR",
+        "skin_types": [
+          "Oily",
+          "Combination"
+        ],
+        "concentration": "10% Vitamin C"
+      },
+      "product_b": {
+        "name": "RadiantGlow Niacinamide Serum",
+        "key_ingredients": [
+          "Niacinamide",
+          "Zinc PCA",
+          "Hyaluronic Acid"
+        ],
+        "benefits": [
+          "Pore minimizing",
+          "Oil control",
+          "Brightening"
+        ],
+        "price": 599.0,
+        "currency": "INR",
+        "skin_types": [
+          "Oily",
+          "Sensitive",
+          "Normal"
+        ],
+        "concentration": "5% Niacinamide"
+      }
+    }
+  },
+  "metadata": {
+    "generated_at": "2025-12-27T17:17:21.990390",
+    "template_used": "comparison-template",
+    "blocks_used": [
+      "comparison-block"
+    ]
+  }
+}
