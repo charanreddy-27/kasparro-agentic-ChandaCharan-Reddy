@@ -1,0 +1,19 @@
+{
+  "name": "kasparro-agentic-content-system",
+  "version": "1.0.0",
+  "description": "Multi-agent content generation system for product pages",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/main.ts",
+    "dev": "ts-node src/main.ts"
+  },
+  "keywords": ["multi-agent", "content-generation", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.2"
+  }
+}

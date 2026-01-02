@@ -1,290 +1,98 @@
 {
-  "pipeline": {
-    "pipeline_id": "content-generation-pipeline",
-    "name": "Content Generation Pipeline",
-    "total_steps": 5,
-    "status_breakdown": {
-      "pending": 0,
-      "running": 0,
-      "completed": 5,
-      "failed": 0,
-      "skipped": 0
-    },
-    "is_complete": true,
-    "has_failures": false,
-    "created_at": "2025-12-27T17:17:21.987853",
-    "completed_at": "2025-12-27T17:17:21.991396"
+  "architecture": "Event-Driven Multi-Agent System",
+  "messagePassingEnabled": true,
+  "autonomousAgents": [
+    "data-ingestion-agent",
+    "question-generation-agent",
+    "content-logic-agent",
+    "template-agent",
+    "page-assembly-agent",
+    "orchestrator-agent"
+  ],
+  "summary": {
+    "totalEvents": 6,
+    "startedAt": "2026-01-02T09:57:06.317Z",
+    "completedAt": "2026-01-02T09:57:06.327Z",
+    "durationMs": 10,
+    "pagesGenerated": [
+      "faq",
+      "product",
+      "comparison"
+    ]
   },
-  "execution_log": [
+  "executionLog": [
     {
-      "agent_id": "orchestrator",
-      "action": "pipeline_start",
-      "details": {
-        "pipeline_id": "content-generation-pipeline",
-        "steps_count": 5
-      },
-      "timestamp": "2025-12-27T17:17:21.988878"
+      "step": 1,
+      "event": "pipeline-start",
+      "agentId": "orchestrator-agent",
+      "status": "triggered",
+      "timestamp": "2026-01-02T09:57:06.317Z",
+      "message": "Pipeline started"
     },
     {
-      "agent_id": "data-parser-agent",
-      "action": "pre_execute",
-      "details": {
-        "status": "starting"
-      },
-      "timestamp": "2025-12-27T17:17:21.988878"
+      "step": 2,
+      "event": "questions-generated",
+      "agentId": "question-generation-agent",
+      "status": "completed",
+      "timestamp": "2026-01-02T09:57:06.322Z",
+      "message": "Generated 19 questions"
     },
     {
-      "agent_id": "data-parser-agent",
-      "action": "parsed_product",
-      "details": {
-        "product_name": "GlowBoost Vitamin C Serum",
-        "fields_parsed": 10
-      },
-      "timestamp": "2025-12-27T17:17:21.989311"
+      "step": 3,
+      "event": "content-blocks-ready",
+      "agentId": "content-logic-agent",
+      "status": "completed",
+      "timestamp": "2026-01-02T09:57:06.324Z",
+      "message": "Content blocks generated"
     },
     {
-      "agent_id": "data-parser-agent",
-      "action": "post_execute",
-      "details": {
-        "status": "completed"
-      },
-      "timestamp": "2025-12-27T17:17:21.989311"
+      "step": 4,
+      "event": "page-assembled",
+      "agentId": "page-assembly-agent",
+      "status": "completed",
+      "timestamp": "2026-01-02T09:57:06.326Z",
+      "message": "faq page assembled"
     },
     {
-      "agent_id": "question-generator-agent",
-      "action": "pre_execute",
-      "details": {
-        "status": "starting"
-      },
-      "timestamp": "2025-12-27T17:17:21.989311"
+      "step": 5,
+      "event": "page-assembled",
+      "agentId": "page-assembly-agent",
+      "status": "completed",
+      "timestamp": "2026-01-02T09:57:06.326Z",
+      "message": "product page assembled"
     },
     {
-      "agent_id": "question-generator-agent",
-      "action": "generated_questions",
-      "details": {
-        "total_questions": 23,
-        "categories": [
-          "suitability",
-          "comparison",
-          "ingredients",
-          "safety",
-          "effectiveness",
-          "informational",
-          "purchase",
-          "usage"
-        ]
-      },
-      "timestamp": "2025-12-27T17:17:21.990001"
+      "step": 6,
+      "event": "page-assembled",
+      "agentId": "page-assembly-agent",
+      "status": "completed",
+      "timestamp": "2026-01-02T09:57:06.327Z",
+      "message": "comparison page assembled"
     },
     {
-      "agent_id": "question-generator-agent",
-      "action": "post_execute",
-      "details": {
-        "status": "completed"
-      },
-      "timestamp": "2025-12-27T17:17:21.990001"
+      "step": 7,
+      "event": "pipeline-complete",
+      "agentId": "orchestrator-agent",
+      "status": "completed",
+      "timestamp": "2026-01-02T09:57:06.327Z",
+      "message": "All 3 pages generated"
     },
     {
-      "agent_id": "product-page-agent",
-      "action": "pre_execute",
-      "details": {
-        "status": "starting"
-      },
-      "timestamp": "2025-12-27T17:17:21.990001"
+      "step": 8,
+      "event": "product-model-ready",
+      "agentId": "data-ingestion-agent",
+      "status": "completed",
+      "timestamp": "2026-01-02T09:57:06.327Z",
+      "message": "Product normalized: GlowBoost Vitamin C Serum"
     },
     {
-      "agent_id": "product-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "benefits-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.990001"
-    },
-    {
-      "agent_id": "product-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "usage-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "product-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "safety-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "product-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "ingredients-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "product-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "pricing-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "product-page-agent",
-      "action": "generated_product_page",
-      "details": {
-        "product_name": "GlowBoost Vitamin C Serum",
-        "blocks_used": [
-          "benefits-block",
-          "usage-block",
-          "safety-block",
-          "ingredients-block",
-          "pricing-block"
-        ],
-        "sections_generated": 7
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "product-page-agent",
-      "action": "post_execute",
-      "details": {
-        "status": "completed"
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "comparison-page-agent",
-      "action": "pre_execute",
-      "details": {
-        "status": "starting"
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "comparison-page-agent",
-      "action": "generated_comparison_page",
-      "details": {
-        "product_a": "GlowBoost Vitamin C Serum",
-        "product_b": "RadiantGlow Niacinamide Serum"
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "comparison-page-agent",
-      "action": "post_execute",
-      "details": {
-        "status": "completed"
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "faq-page-agent",
-      "action": "pre_execute",
-      "details": {
-        "status": "starting"
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "faq-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "benefits-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "faq-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "usage-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.990390"
-    },
-    {
-      "agent_id": "faq-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "safety-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.991396"
-    },
-    {
-      "agent_id": "faq-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "ingredients-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.991396"
-    },
-    {
-      "agent_id": "faq-page-agent",
-      "action": "processed_block",
-      "details": {
-        "block_id": "pricing-block",
-        "success": true
-      },
-      "timestamp": "2025-12-27T17:17:21.991396"
-    },
-    {
-      "agent_id": "faq-page-agent",
-      "action": "generated_faq_page",
-      "details": {
-        "product_name": "GlowBoost Vitamin C Serum",
-        "questions_count": 8,
-        "blocks_used": [
-          "benefits-block",
-          "usage-block",
-          "safety-block",
-          "ingredients-block",
-          "pricing-block"
-        ]
-      },
-      "timestamp": "2025-12-27T17:17:21.991396"
-    },
-    {
-      "agent_id": "faq-page-agent",
-      "action": "post_execute",
-      "details": {
-        "status": "completed"
-      },
-      "timestamp": "2025-12-27T17:17:21.991396"
-    },
-    {
-      "agent_id": "orchestrator",
-      "action": "pipeline_complete",
-      "details": {
-        "summary": {
-          "pipeline_id": "content-generation-pipeline",
-          "name": "Content Generation Pipeline",
-          "total_steps": 5,
-          "status_breakdown": {
-            "pending": 0,
-            "running": 0,
-            "completed": 5,
-            "failed": 0,
-            "skipped": 0
-          },
-          "is_complete": true,
-          "has_failures": false,
-          "created_at": "2025-12-27T17:17:21.987853",
-          "completed_at": "2025-12-27T17:17:21.991396"
-        }
-      },
-      "timestamp": "2025-12-27T17:17:21.991396"
+      "step": 9,
+      "event": "raw-data-published",
+      "agentId": "orchestrator-agent",
+      "status": "completed",
+      "timestamp": "2026-01-02T09:57:06.327Z",
+      "message": "Raw data published to message bus"
     }
-  ]
+  ],
+  "generatedAt": "2026-01-02T09:57:06.333Z"
 }

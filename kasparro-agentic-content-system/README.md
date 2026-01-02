@@ -1,215 +1,75 @@
-# Kasparro AI Agentic Content Generation System
+# Kasparro Agentic Content System
 
-A modular, multi-agent content generation system designed to automatically generate structured, machine-readable content pages from product data.
+A **true multi-agent content generation system** built in TypeScript that autonomously generates machine-readable content pages from structured product data.
 
-## 🎯 Overview
+## 🚀 Features
 
-This system demonstrates production-grade agentic architecture for automated content generation. It takes product data as input and generates FAQ pages, product description pages, and comparison pages through a coordinated pipeline of specialized agents.
+- **6 Independent Agents** with explicit input/output contracts
+- **Reusable Logic Blocks** for content transformation
+- **Declarative Templates** defining page structure
+- **Central Orchestrator** coordinating agent execution (no business logic)
+- **Pure JSON Output** - No markdown, no prose, no UI
+
+## 📦 Generated Pages
+
+1. **FAQ Page** (`faq.json`) - 18+ categorized Q&As
+2. **Product Page** (`product_page.json`) - Complete product information
+3. **Comparison Page** (`comparison_page.json`) - Product comparison matrix
 
 ## 🏗️ Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         WORKFLOW ORCHESTRATOR                           │
-│   ┌─────────────────────────────────────────────────────────────────┐   │
-│   │                    EXECUTION PIPELINE (DAG)                      │   │
-│   │                                                                  │   │
-│   │    ┌──────────┐     ┌──────────────┐     ┌───────────────┐      │   │
-│   │    │  Data    │────▶│   Question   │────▶│   FAQ Page    │      │   │
-│   │    │  Parser  │     │  Generator   │     │    Agent      │      │   │
-│   │    │  Agent   │     │    Agent     │     └───────────────┘      │   │
-│   │    └──────────┘     └──────────────┘                            │   │
-│   │          │                                                       │   │
-│   │          │          ┌───────────────┐                           │   │
-│   │          ├─────────▶│  Product Page │                           │   │
-│   │          │          │     Agent     │                           │   │
-│   │          │          └───────────────┘                           │   │
-│   │          │                                                       │   │
-│   │          │          ┌───────────────┐                           │   │
-│   │          └─────────▶│  Comparison   │                           │   │
-│   │                     │  Page Agent   │                           │   │
-│   │                     └───────────────┘                           │   │
-│   └─────────────────────────────────────────────────────────────────┘   │
-│                                                                         │
-│   ┌─────────────────────────────────────────────────────────────────┐   │
-│   │                    CONTENT LOGIC BLOCKS                          │   │
-│   │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────┐ │   │
-│   │  │ Benefits │ │  Usage   │ │Ingredients│ │  Safety  │ │Pricing │ │   │
-│   │  │  Block   │ │  Block   │ │  Block   │ │  Block   │ │ Block  │ │   │
-│   │  └──────────┘ └──────────┘ └──────────┘ └──────────┘ └────────┘ │   │
-│   │                      ┌──────────────┐                           │   │
-│   │                      │  Comparison  │                           │   │
-│   │                      │    Block     │                           │   │
-│   │                      └──────────────┘                           │   │
-│   └─────────────────────────────────────────────────────────────────┘   │
-│                                                                         │
-│   ┌─────────────────────────────────────────────────────────────────┐   │
-│   │                      TEMPLATE ENGINE                             │   │
-│   │  ┌──────────────┐ ┌──────────────┐ ┌──────────────────┐         │   │
-│   │  │ FAQ Template │ │Product Page  │ │Comparison Template│         │   │
-│   │  │              │ │  Template    │ │                  │         │   │
-│   │  └──────────────┘ └──────────────┘ └──────────────────┘         │   │
-│   └─────────────────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────────────┘
+Orchestrator
+    ├── DataIngestionAgent      → ProductModel
+    ├── QuestionGenerationAgent → QuestionSet (15+ Q&As)
+    ├── ContentLogicAgent       → Content Blocks
+    ├── TemplateAgent           → Page Templates
+    └── PageAssemblyAgent       → Final JSON Pages
+```
+
+## 🛠️ Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Run the system
+npm start
 ```
 
 ## 📁 Project Structure
 
 ```
-kasparro-agentic-content-system/
-├── src/
-│   ├── __init__.py
-│   ├── models/                 # Data models
-│   │   ├── product.py          # Product data model
-│   │   ├── content.py          # Content block models
-│   │   └── questions.py        # Question models
-│   ├── agents/                 # Agent implementations
-│   │   ├── base_agent.py       # Abstract base agent
-│   │   ├── parser_agent.py     # Data parsing agent
-│   │   ├── question_generator_agent.py
-│   │   ├── faq_agent.py        # FAQ page generator
-│   │   ├── product_page_agent.py
-│   │   └── comparison_agent.py
-│   ├── blocks/                 # Content logic blocks
-│   │   ├── base_block.py       # Abstract base block
-│   │   ├── benefits_block.py
-│   │   ├── usage_block.py
-│   │   ├── ingredients_block.py
-│   │   ├── safety_block.py
-│   │   ├── pricing_block.py
-│   │   └── comparison_block.py
-│   ├── templates/              # Page templates
-│   │   ├── template_engine.py
-│   │   ├── faq_template.py
-│   │   ├── product_template.py
-│   │   └── comparison_template.py
-│   └── orchestrator/           # Pipeline orchestration
-│       ├── pipeline.py
-│       └── workflow_orchestrator.py
-├── output/                     # Generated JSON outputs
-│   ├── faq.json
-│   ├── product_page.json
-│   ├── comparison_page.json
-│   └── questions.json
-├── docs/
-│   └── projectdocumentation.md
-├── main.py                     # Entry point
-└── README.md
+src/
+├── agents/           # 6 independent agents
+├── logic/            # Reusable logic blocks
+├── templates/        # Declarative page templates
+├── models/           # TypeScript interfaces
+└── main.ts           # Entry point
+
+output/               # Generated JSON files
+docs/                 # Project documentation
 ```
 
-## 🚀 Quick Start
+## 📖 Documentation
 
-### Running the System
+See [docs/projectdocumentation.md](docs/projectdocumentation.md) for detailed system design and architecture.
 
-```bash
-cd kasparro-agentic-content-system
-python main.py
-```
+## 🔧 Input Data
 
-### Input Data Format
-
-```python
-PRODUCT_DATA = {
-    "Product Name": "GlowBoost Vitamin C Serum",
-    "Concentration": "10% Vitamin C",
-    "Skin Type": "Oily, Combination",
-    "Key Ingredients": "Vitamin C, Hyaluronic Acid",
-    "Benefits": "Brightening, Fades dark spots",
-    "How to Use": "Apply 2–3 drops in the morning before sunscreen",
-    "Side Effects": "Mild tingling for sensitive skin",
-    "Price": "₹699"
+```json
+{
+  "product_name": "GlowBoost Vitamin C Serum",
+  "concentration": "10% Vitamin C",
+  "skin_type": ["Oily", "Combination"],
+  "key_ingredients": ["Vitamin C", "Hyaluronic Acid"],
+  "benefits": ["Brightening", "Fades dark spots"],
+  "how_to_use": "Apply 2–3 drops in the morning before sunscreen",
+  "side_effects": "Mild tingling for sensitive skin",
+  "price": 699
 }
 ```
 
-### Output Files
+## 📄 License
 
-- `output/faq.json` - FAQ page with 8 categorized Q&As
-- `output/product_page.json` - Complete product description page
-- `output/comparison_page.json` - Comparison with fictional product
-- `output/questions.json` - 18 categorized user questions
-
-## 🧩 Components
-
-### Agents
-
-| Agent | Responsibility | Input | Output |
-|-------|---------------|-------|--------|
-| DataParserAgent | Parse raw data into Product model | Dict | Product |
-| QuestionGeneratorAgent | Generate categorized questions | Product | QuestionSet |
-| FAQPageAgent | Generate FAQ page | Product | GeneratedPage |
-| ProductPageAgent | Generate product description | Product | GeneratedPage |
-| ComparisonPageAgent | Generate comparison page | Product | GeneratedPage |
-
-### Content Logic Blocks
-
-| Block | Purpose |
-|-------|---------|
-| BenefitsBlock | Transform benefits into multiple formats |
-| UsageBlock | Parse usage instructions into steps |
-| IngredientsBlock | Enrich ingredient data |
-| SafetyBlock | Generate safety warnings and precautions |
-| PricingBlock | Format pricing and value propositions |
-| ComparisonBlock | Generate product comparisons |
-
-### Templates
-
-| Template | Output Structure |
-|----------|-----------------|
-| FAQTemplate | Q&A entries, categories, quick links |
-| ProductPageTemplate | Hero, benefits, ingredients, usage, safety sections |
-| ComparisonPageTemplate | Comparison table, winners, recommendations |
-
-## 📊 Pipeline Flow
-
-```
-Raw Data → DataParserAgent → Product Model
-                ↓
-        QuestionGeneratorAgent → 18 Questions (8 categories)
-                ↓
-    ┌───────────┼───────────┐
-    ↓           ↓           ↓
-FAQAgent  ProductAgent  ComparisonAgent
-    ↓           ↓           ↓
-faq.json  product.json  comparison.json
-```
-
-## 🔧 Extensibility
-
-### Adding New Agents
-
-```python
-class CustomAgent(BaseAgent[InputType, OutputType]):
-    def __init__(self):
-        super().__init__("custom-agent", "Custom Agent")
-        self._dependencies = ["data-parser-agent"]
-    
-    def validate_input(self, input_data: InputType) -> bool:
-        return True
-    
-    def execute(self, input_data: InputType, context: AgentContext) -> OutputType:
-        # Implementation
-        pass
-```
-
-### Adding New Content Blocks
-
-```python
-class CustomBlock(ContentLogicBlock):
-    def __init__(self):
-        super().__init__("custom-block", "Custom Block")
-    
-    def get_required_fields(self) -> List[str]:
-        return ["field1", "field2"]
-    
-    def process(self, product: Product, context: Dict) -> ContentBlock:
-        # Implementation
-        pass
-```
-
-## 📝 License
-
-MIT License
-
-## 👤 Author
-
-Kasparro AI Assignment
+MIT
