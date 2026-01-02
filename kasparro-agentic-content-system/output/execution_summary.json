@@ -11,8 +11,8 @@
   ],
   "summary": {
     "totalEvents": 6,
-    "startedAt": "2026-01-02T09:57:06.317Z",
-    "completedAt": "2026-01-02T09:57:06.327Z",
+    "startedAt": "2026-01-02T10:01:27.046Z",
+    "completedAt": "2026-01-02T10:01:27.056Z",
     "durationMs": 10,
     "pagesGenerated": [
       "faq",
@@ -26,7 +26,7 @@
       "event": "pipeline-start",
       "agentId": "orchestrator-agent",
       "status": "triggered",
-      "timestamp": "2026-01-02T09:57:06.317Z",
+      "timestamp": "2026-01-02T10:01:27.046Z",
       "message": "Pipeline started"
     },
     {
@@ -34,7 +34,7 @@
       "event": "questions-generated",
       "agentId": "question-generation-agent",
       "status": "completed",
-      "timestamp": "2026-01-02T09:57:06.322Z",
+      "timestamp": "2026-01-02T10:01:27.051Z",
       "message": "Generated 19 questions"
     },
     {
@@ -42,7 +42,7 @@
       "event": "content-blocks-ready",
       "agentId": "content-logic-agent",
       "status": "completed",
-      "timestamp": "2026-01-02T09:57:06.324Z",
+      "timestamp": "2026-01-02T10:01:27.053Z",
       "message": "Content blocks generated"
     },
     {
@@ -50,7 +50,7 @@
       "event": "page-assembled",
       "agentId": "page-assembly-agent",
       "status": "completed",
-      "timestamp": "2026-01-02T09:57:06.326Z",
+      "timestamp": "2026-01-02T10:01:27.055Z",
       "message": "faq page assembled"
     },
     {
@@ -58,7 +58,7 @@
       "event": "page-assembled",
       "agentId": "page-assembly-agent",
       "status": "completed",
-      "timestamp": "2026-01-02T09:57:06.326Z",
+      "timestamp": "2026-01-02T10:01:27.056Z",
       "message": "product page assembled"
     },
     {
@@ -66,7 +66,7 @@
       "event": "page-assembled",
       "agentId": "page-assembly-agent",
       "status": "completed",
-      "timestamp": "2026-01-02T09:57:06.327Z",
+      "timestamp": "2026-01-02T10:01:27.056Z",
       "message": "comparison page assembled"
     },
     {
@@ -74,7 +74,7 @@
       "event": "pipeline-complete",
       "agentId": "orchestrator-agent",
       "status": "completed",
-      "timestamp": "2026-01-02T09:57:06.327Z",
+      "timestamp": "2026-01-02T10:01:27.056Z",
       "message": "All 3 pages generated"
     },
     {
@@ -82,7 +82,7 @@
       "event": "product-model-ready",
       "agentId": "data-ingestion-agent",
       "status": "completed",
-      "timestamp": "2026-01-02T09:57:06.327Z",
+      "timestamp": "2026-01-02T10:01:27.057Z",
       "message": "Product normalized: GlowBoost Vitamin C Serum"
     },
     {
@@ -90,9 +90,9 @@
       "event": "raw-data-published",
       "agentId": "orchestrator-agent",
       "status": "completed",
-      "timestamp": "2026-01-02T09:57:06.327Z",
+      "timestamp": "2026-01-02T10:01:27.058Z",
       "message": "Raw data published to message bus"
     }
   ],
-  "generatedAt": "2026-01-02T09:57:06.333Z"
+  "generatedAt": "2026-01-02T10:01:27.064Z"
 }
